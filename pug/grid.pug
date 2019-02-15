@@ -1,0 +1,110 @@
+doctype html
+html
+	include ../pug/include/header
+	link(rel='stylesheet' href='../css/grid.css')
+	body 
+		include ../pug/include/header_menu
+		.row.item_content
+			.container.site-content2
+				.row.section_item_top
+					.stt2_spc
+						h5 Home
+							span /Danh sách sản phẩm
+				.row.section_item
+					include ../pug/include/libary_grid
+					.post_grid4.col-md-9
+						.row.banner_right
+							img(src='../images/02_1grid.png')
+						.row.section_right_
+								.section_right_left.col-md-6
+									i.fas.fa-th
+									a(href='../html/list.html')
+										i.fas.fa-th-list
+								.section_right_right.col-md-6
+									a Sắp xếp theo
+									.dropdown
+										button.dropbtn Tên sản phẩm
+											i.fas.fa-caret-down
+										.dropdown-content
+											a(href='#') Tên sản phẩm
+											a(href='#') Giá tiền
+											a(href='#') Đánh giá
+									a Show
+									.show
+										button.dropbtn 15
+											i.fas.fa-caret-down
+										.dropdown-content
+											a(href='#') 14
+											a(href='#') 13
+											a(href='#') 12
+						.row.section_right1
+							mixin grid(href,img,name)
+								.item4.col-md-4
+									.section_icon1_right
+										a(href=href)
+											img(src=img)
+										.section_icon1_item1_chung=name
+											br
+											each val in [1, 2, 3, 4]
+												i.fas.fa-star
+											i.fas.fa-star-half
+											br
+											a.mainprice 150.000 đ
+											a.secondprice 250.000 đ
+							+grid('../html/detail_item.html','../images/sp15.png','Cây dạ lam')
+							+grid('../html/detail_item.html','../images/sp13.png','Cây danh dự')
+							+grid('../html/detail_item.html','../images/sp11.png','Cây chân chim')
+						.row.section_right1
+							mixin grid(href,img,name)
+								.item4.col-md-4
+									.section_icon1_right
+										a(href=href)
+											img(src=img)
+										.section_icon1_item1_chung=name
+											br
+											- for(var i = 0; i < 4; i++)
+												i.fas.fa-star
+											i.fas.fa-star-half
+											br
+											a.mainprice 150.000 đ
+											a.secondprice 250.000 đ
+							+grid('../html/detail_item.html','../images/sp2.png','Cây cọ ta')
+							+grid('../html/detail_item.html','../images/sp8.png','Cây dứa nhỏ')
+							+grid('../html/detail_item.html','../images/sp1.png','Cây đa búp đỏ')
+								//- right row 2
+						.row.section_right1
+							mixin grid(href,img,name)
+								.item4.col-md-4
+									.section_icon1_right
+										a(href=href)
+											img(src=img)
+										.section_icon1_item1_chung=name
+											br
+											each val in [1, 2, 3, 4]
+												i.fas.fa-star
+											i.fas.fa-star-half
+											br
+											a.mainprice 150.000 đ
+											a.secondprice 250.000 đ
+							+grid('../html/detail_item.html','../images/sp12.png','Cây chân chim')
+							+grid('../html/detail_item.html','../images/sp15.png','Cây dứa nhỏ')
+							+grid('../html/detail_item.html','../images/sp11.png','Cây cọ ta')
+						.row.section_right1
+							mixin grid(href,img,name)
+								.item4.col-md-4
+									.section_icon1_right
+										a(href=href)
+											img(src=img)
+										.section_icon1_item1_chung=name
+											br
+											each val in [1, 2, 3, 4]
+												i.fas.fa-star
+											i.fas.fa-star-half
+											br
+											a.mainprice 150.000 đ
+											a.secondprice 250.000 đ
+							+grid('../html/detail_item.html','../images/sp2.png','Cây dạ lam')
+							+grid('../html/detail_item.html','../images/sp8.png','Cây danh dự')
+							+grid('../html/detail_item.html','../images/sp1.png','Cây dứa nhỏ')
+					include ../pug/include/page
+		include ../pug/include/footer

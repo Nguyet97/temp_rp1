@@ -1,0 +1,84 @@
+doctype html
+html
+	include ../pug/include/header
+	link(rel='stylesheet' href='../css/shopping_cart.css')
+	body 
+		include ../pug/include/header_menu
+		.row.input
+			.container
+				.row.section_input1
+					.stt2_spc
+						h5 Home
+							span /Giỏ hàng
+				.row.input_text
+						h4 Giỏ hàng
+				.row.section_input2
+					.container.table-responsive
+						table.table.table-bordered
+							thead
+								tr
+									th Hình ảnh
+									th Tên sản phẩm
+									th Đơn giá
+									th Số lượng
+									th Thành tiền
+									th Xóa
+							tbody
+								tr
+									td.img
+										a(href='../html/detail_item.html')
+											img(src='../images/sp1.png')
+									td.name_item Cây văn phòng
+									td 270.000 đ
+									td.amount 
+										a 1
+									td 270.000 đ
+									td.trash
+										i.fas.fa-trash-alt
+								tr
+									td.img
+										a(href='../html/detail_item.html')
+											img(src='../images/sp1.png')
+									td.name_item Cây văn phòng
+									td 270.000 đ
+									td.amount 
+										a 1
+									td 270.000 đ
+									td.trash
+										i.fas.fa-trash-alt
+								tr
+									td.img
+										a(href='../html/detail_item.html')
+											img(src='../images/sp1.png')
+									td.name_item Cây văn phòng
+									td 270.000 đ
+									td.amount 
+										a 1
+									td 270.000 đ
+									td.trash
+										i.fas.fa-trash-alt
+				.row.input_box1
+					.col-lg-12.section
+						.comback
+							a(href='../html/home.html')
+								input(type='submit', value='Hủy đơn hàng' )
+						.register
+							a(href='../html/grid.html')
+								input(type='submit', value='Tiếp tục mua' )
+				.row.purchase
+					table.table.table-bordered.total_table
+						tbody
+							tr
+								td Tổng tiền (chưa thuế)
+								td 270.000 đ
+							tr
+								td Thuế (vat 10%)
+								td 27.000 đ
+							tr
+								td.name_purchase Tổng phải thanh toán
+								td.price_purchase 297.000 đ
+				.row.input_box1
+					.comback
+						a(href='../html/shopping_cart.html')
+							input(type='submit', value='Thanh toán')
+		include ../pug/include/footer
